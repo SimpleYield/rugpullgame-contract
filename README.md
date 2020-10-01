@@ -3,12 +3,15 @@
 
 REMEMBER 
 THE FUNNCTION:
+
+```
     function randomWin() internal returns (uint) {
         uint randomnumber = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, nonce, block.difficulty))).mod(1000);
         randomnumber = randomnumber;
         nonce++;
         return randomnumber;
         }    
+```
 
 IS PREDICTABLE!!
 
